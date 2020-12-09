@@ -8,7 +8,7 @@ public class Cotxe_Adan_Inarejos extends CotxeAbstracte implements InterfaceCotx
     @Override
     public void arrancarMotor() throws Exception {
         if (this.estado.equals(EstatsMotorCotxe.EnMarxa)){
-            throw new Exception("El coche ya esta en marcha");
+            throw new Exception("El cotxe ya esta en marxa");
         } else {
             this.estado=EstatsMotorCotxe.EnMarxa;
         }
@@ -22,7 +22,7 @@ public class Cotxe_Adan_Inarejos extends CotxeAbstracte implements InterfaceCotx
     @Override
     public int getRevolucions() {
         if (this.estado.equals(EstatsMotorCotxe.Aturat)){
-            return revoluciones;
+            return 0;
         } else {
              revoluciones=(int)(Math.random()*6500+1);
              return revoluciones;
@@ -31,7 +31,11 @@ public class Cotxe_Adan_Inarejos extends CotxeAbstracte implements InterfaceCotx
 
     @Override
     public void aturarMotor() throws Exception {
-
+        if(this.estado.equals(EstatsMotorCotxe.Aturat)){
+            throw new Exception("El cotxe ya esta aturat");
+        } else {
+            this.estado=EstatsMotorCotxe.Aturat;
+        }
     }
 }
 
