@@ -1,5 +1,6 @@
 public enum MarxasAutomatic {
     F,
     N,
-    R
+    R,
+    puta
 }
