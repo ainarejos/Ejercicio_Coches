@@ -43,5 +43,7 @@ public class Cotxe_Adan_Inarejos extends CotxeAbstracte implements InterfaceCotx
             this.estado=EstatsMotorCotxe.Aturat;
         }
     }
+
+
 }
 
